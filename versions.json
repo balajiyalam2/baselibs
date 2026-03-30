@@ -2,5 +2,9 @@
   {
     "version": "main",
     "url": "https://balajiyalam2.github.io/baselibs/main/"
+  },
+  {
+    "version": "balajiyalam2",
+    "url": "https://balajiyalam2.github.io/baselibs/balajiyalam2/"
   }
 ]
