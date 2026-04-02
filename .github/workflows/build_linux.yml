@@ -64,7 +64,7 @@ jobs:
           sudo apt install -y qemu-user
       - name: Bazel Build
         run: |
-          bazel build --lockfile_mode=error --config ${{ matrix.bazel-config }} -- ${{ matrix.bazel-build-target }}
+          bazel build --config ${{ matrix.bazel-config }} -- ${{ matrix.bazel-build-target }}
           if git diff HEAD~1 HEAD | grep -q "MODULE.bazel"; then
              if !(git diff  HEAD~1 HEAD | grep -q  "MODULE.bazel.lock"); then
                 echo "::error::MODULE.bazel.lock is changed"

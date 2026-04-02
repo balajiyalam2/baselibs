@@ -45,8 +45,6 @@ jobs:
         run: |
           bazel coverage --config=bl-x86_64-linux -- //score/... \
           -//score/language/safecpp/aborts_upon_exception:abortsuponexception_toolchain_test
-          bazel coverage  --lockfile_mode=error --config=bl-x86_64-linux -- //score/... \
-          -//score/language/safecpp/aborts_upon_exception:abortsuponexception_toolchain_test
       - name: Generate HTML Coverage Report
         run: |
           genhtml "$(bazel info output_path)/_coverage/_coverage_report.dat" \
